@@ -35,39 +35,42 @@
       margin: auto;
     }
 
-    #loginh1{
+    #loginh1 {
       font-size: 28px;
     }
 
-    .inputs{
+    .inputs {
       width: 350px;
+      margin-right: 30px;
     }
 
-    #userP{
-      margin-right: 45px;
+    #userP {
+      margin-right: 75px;
     }
-    
+
   </style>
+
 </head>
 
 <body class="text-center">
+
   <div class="container p-5">
     <form class="formSignIn">
       <img src="img/login.png" alt="Login Image" width="250" height="100">
       <br>
       <h1 id="loginh1">Por favor, inicie sesión</h1>
       <label for="userEmail">Email</label>
-      <input class="inputs" name="userEmail" type="email" placeholder="Introduzca su correo electrónico" required>
+      <input class="inputs" id="userE" name="userEmail" type="email" placeholder="Introduzca su correo electrónico">
       <br>
       <label for="userPassword">Contraseña</label>
-      <input class="inputs" id="userP" name="userPassword" type="password" placeholder="Introduzca su contraseña" required>
+      <input class="inputs" id="userP" name="userPassword" type="password" placeholder="Introduzca su contraseña">
       <br>
-      <button id="submit">Ingresar</button>
-
+      <button type="button" id="submit">Ingresar</button>
     </form>
   </div>
 
   <script src="js/init.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/login.js"></script>
+
 </body>
 </html>

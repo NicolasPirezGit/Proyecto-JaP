@@ -2,7 +2,7 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 
-const INICIO = "file:///C:/Users/equipo/Desktop/Programaci%C3%B3n/1-%20JaP/FASE%202/Curso%20T%C3%A9cnico/Pr%C3%A1cticos/PROYECTO/Materiales/REPOSITORIO%20PROYECTO/Proyecto-JaP/index.html";
+const INICIO = "https://nicolaspirezgit.github.io/Proyecto-JaP/cover";
 
 
 document.addEventListener("DOMContentLoaded", function(e){
@@ -12,6 +12,15 @@ document.addEventListener("DOMContentLoaded", function(e){
        let password = document.getElementById("userP");
        let camposCompletos = true;
 
-       if(password.value === '' || email.value === '')
+       if(password.value === '' || email.value === ''){
+           camposCompletos = false;
+           alert("Debe rellenar todos los campos");
+       }
+       
+       if(camposCompletos) {
+           window.location.href = INICIO;
+       }
    })
 });
+
+//RENOMBRAR ARCHIVO LOGIN POR INDEX PARA QUE AL INGRESAR VAYA DIRECTO AL LOGIN. AL INDEX (PORTADA DE LA PAGINA) LE PONEMOS OTRO NOMBRE. EJ: COVER.
