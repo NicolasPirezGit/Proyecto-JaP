@@ -139,3 +139,37 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+.main-title{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 25px;
+}
+
+#products-container{
+  margin: 0px 105px 50px 105px;
+}
+
+#prod-title{
+  font-size: 34px;
+}
+
+#prod-sub-title{
+  font-size: 19px;
+  color: rgba(69, 69, 69, 1);
+}
+
+.products-filter{
+  margin-top: 60px;
+}
+
+#filter-name{
+  margin: 10px 30px 0px 0px;
+}
+
+#info-user {
+  color: white;
+  position: relative;
+  top: 8px;
+  left: 30px;
+}

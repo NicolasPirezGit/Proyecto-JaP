@@ -7,17 +7,18 @@ const INICIO = "https://nicolaspirezgit.github.io/Proyecto-JaP/cover";
 
 document.addEventListener("DOMContentLoaded", function(e){
 
-   document.getElementById("submit").addEventListener("click", function(e){
-       let email = document.getElementById("userE");
+   document.getElementById("submit").addEventListener("click", function(){
+       let inputEmail = document.getElementById("userE");
        let password = document.getElementById("userP");
        let camposCompletos = true;
 
-       if(password.value === '' || email.value === ''){
+       if(password.value === '' || inputEmail.value === ''){
            camposCompletos = false;
            alert("Debe rellenar todos los campos");
        }
        
        if(camposCompletos) {
+           localStorage.setItem("User-Logged", JSON.stringify( {email: inputEmail.value} ));
            window.location.href = INICIO;
        }
    })

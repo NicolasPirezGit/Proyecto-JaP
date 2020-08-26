@@ -21,10 +21,63 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <p id="user-login"></p>
       </div>
     </nav>
+    <div class="main-title">
+      <h1 id="prod-title">Productos</h1>
+      <p id="prod-sub-title">¡Encuentra lo que estás buscando!</p>
+    </div>
+    <div class="products-filter">
+
+      <!--FILTRO ASCENDENTE Y DESCENDENTE POR PRECIO, Y DESCENDENTE POR RELEVANCIA-->
+      <div class="container">
+        <div class="row">
+            <div class="col text-right">
+                <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+                    <p id="filter-name">Filtrar por:</p>
+                    <label class="btn btn-light active" id="sortDesc" >
+                        <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-up mr-1"></i>Precio más alto
+                    </label>
+                    <label class="btn btn-light" id="sortAsc" >
+                        <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Precio más bajo
+                    </label>
+                    <label class="btn btn-light" id="sortByCount" >
+                        <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Relevancia
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------------------------------------------------->
+
+        <!--FILTRO DE RANGO POR PRECIO-->
+        <div class="row justify-content-end">
+          <div class="col-md-6"></div>
+            <div class="col-md-6 col-sm-12 mb-1 container">
+              <div class="row container p-0 m-0">
+                <div class="col">
+                  <p class="font-weight-normal text-right my-2">Precio (USD):</p>
+                </div>
+                <div class="col">
+                  <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+                </div>
+                <div class="col">
+                  <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+                </div>
+                <div class="col-3 p-0">
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                    <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!------------------------------>
+        
+    </div>
     <div id="products-container">
-      <!--Acá es donde hay que poner el listado-->
+      <!--Aquí se muestra el listado de productos-->
     </div>
     <footer class="text-muted bg-light">
       <div class="container">
