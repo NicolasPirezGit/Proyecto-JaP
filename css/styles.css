@@ -173,3 +173,22 @@ a.custom-card:hover {
   top: 8px;
   left: 30px;
 }
+
+#buscador {
+  position: relative;
+  top: -20px;
+  left: 675px;
+  width: 370px;
+}
+
+#search-label {
+  position: relative;
+  top: 20px;
+  left: 590px;
+}
+
+#clear-search {
+  position:relative;
+  top: -55px;
+  left: 1050px;
+}
