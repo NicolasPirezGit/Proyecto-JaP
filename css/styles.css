@@ -192,3 +192,59 @@ a.custom-card:hover {
   top: -55px;
   left: 1050px;
 }
+
+#commentsSubTitle, #commentsSecTitle {
+  text-align: center;
+}
+
+#commentsSecTitle {
+  margin-top: 20px;
+}
+
+#userNameComm {
+  font-weight: bold;
+}
+
+#commentBox {
+  color: #9f9f9f;
+}
+
+#rank {
+  font-size: 15px;
+}
+
+#commentDateTime{
+  font-size: 14px;
+  color: #9f9f9f;
+}
+
+#commentBoxHeader {
+  font-size: 18px;
+}
+
+#userCommentBox {
+  width: 600px;
+}
+
+#publishCommentButton {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+  height: 50px;
+  top: -25px;
+  left: -170px;
+  box-shadow: none;
+  background-color: #2450e0;
+  color: #fcfcfc;
+}
+
+.checked {
+  color: orange;
+}
+
+#userProductRank, #labelProductRank {
+  position: relative;
+  top: 50px;
+  left: -604px;
+}
