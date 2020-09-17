@@ -4,6 +4,7 @@
 var product = {};
 var comment = {};
 
+
 function showImagesGallery(array){
 
     let htmlContentToAppend = "";
@@ -21,7 +22,36 @@ function showImagesGallery(array){
 
         document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
     }
+
 }
+
+
+function showRelatedProducts(array) {
+
+    let htmlContentToAppend = "";
+
+    for (let i = 0; i < array.length; i++) {
+        let currentRelProd = array[i];
+
+        htmlContentToAppend = `
+        <div class="row">
+                <div class="col-md-4">
+                  <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
+                    <img class="bd-placeholder-img card-img-top"  src=${currentRelProd.imgSrc}>
+                    <h3 class="card-prod-title"></h3>
+                    <div class="card-body">
+                      <p class="card-text">${currentRelProd.description}</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+        `
+
+        document.getElementById("related-products-elements").innerHTML = htmlContentToAppend;    
+    }
+    
+}
+
 
 function showCommentsSection(array){
 
@@ -94,6 +124,7 @@ function showCommentsSection(array){
     });
 }
 
+
 function userCommentStyling() {
 
     document.getElementById("userCommentBox").addEventListener("focusin", () => {
@@ -117,14 +148,9 @@ function userCommentStyling() {
     
 }
 
-/*function publishUserComment() {
-
-}*/
 
 
-document.addEventListener("DOMContentLoaded", function(e){
-    let publishCommentButton = document.getElementById("publishCommentButon");
-    let userCommentBox = document.getElementById("userCommentBox");
+document.addEventListener("DOMContentLoaded", () => {
 
     getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
         if (resultObj.status === "ok") {
@@ -135,7 +161,8 @@ document.addEventListener("DOMContentLoaded", function(e){
             let productCostHTML = document.getElementById("productCost");
             let productSoldCountHTML = document.getElementById("productSoldCount");
             let productCategoryHTML = document.getElementById("productCategory");
-        
+            
+
             productNameHTML.innerHTML = product.name;
             productDescriptionHTML.innerHTML = product.description;
             productCostHTML.innerHTML = product.cost + " " + product.currency;
@@ -144,7 +171,22 @@ document.addEventListener("DOMContentLoaded", function(e){
 
             //Muestro las imagenes en forma de galería
             showImagesGallery(product.images);
+
+            
         }
+
+        getJSONData(PRODUCTS_URL).then(function(resultObj) {
+            if(resultObj.status === "ok") {
+                let relatedProduct = resultObj.data;
+
+                let relatedProdNumbers = product.relatedProducts;
+                let relatedProdArray = relatedProduct[relatedProdNumbers[0]];
+                console.log(relatedProdArray);
+                
+                showRelatedProducts(relatedProdArray);     
+            }
+        });
+
     });
 
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj) {
@@ -152,7 +194,6 @@ document.addEventListener("DOMContentLoaded", function(e){
             comment = resultObj.data;
 
             showCommentsSection(comment);
-            publishUserComment();
         }
     });
     userCommentStyling();
