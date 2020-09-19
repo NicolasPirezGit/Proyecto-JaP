@@ -11,16 +11,25 @@ function showImagesGallery(array){
 
     for(let i = 0; i < array.length; i++){
         let imageSrc = array[i];
-
-        htmlContentToAppend += `
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
-            </div>
-        </div>
-        `
-
-        document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
+        let firstImage = 0;
+        
+        if(i === firstImage) {
+            htmlContentToAppend += `
+                <div class="carousel-item active">
+                <img src="${imageSrc}" class="d-block w-100">
+                </div>
+            `
+        }
+        else {
+            htmlContentToAppend += `
+                <div class="carousel-item">
+                <img src="${imageSrc}" class="d-block w-100">
+                </div>
+            `
+        }
+        
+        
+        document.getElementById("related-prod-carousel").innerHTML = htmlContentToAppend;
     }
 
 }
@@ -38,10 +47,12 @@ function showRelatedProducts(array, arrayPositions) {
             if(i === arrayPositions[x]) {
                 htmlContentToAppend += `
                 
-                    <div class="col-md-4">
+                    <div class="col-md-4 related-prod-card">
                         <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
                             <img class="bd-placeholder-img card-img-top"  src=${currentRelProd.imgSrc}>
+                            <hr>
                             <h3 class="card-prod-title"><strong>${currentRelProd.name}</strong></h3>
+                            <hr>
                             <div class="card-body">
                                 <p class="card-text">${currentRelProd.description}</p>
                             </div>
@@ -52,25 +63,7 @@ function showRelatedProducts(array, arrayPositions) {
                 document.getElementById("related-products-row").innerHTML = htmlContentToAppend;
             }
             
-        }
-        
-        /*let currentRelProd = array[i];
-
-        htmlContentToAppend += `
-        <div class="row">
-                <div class="col-md-4">
-                  <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
-                    <img class="bd-placeholder-img card-img-top"  src=${currentRelProd.imgSrc}>
-                    <h3 class="card-prod-title"><strong>${currentRelProd.name}</strong></h3>
-                    <div class="card-body">
-                      <p class="card-text">${currentRelProd.description}</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-        `
-
-        document.getElementById("related-products-elements").innerHTML = htmlContentToAppend;*/  
+        }  
     }
 
 }

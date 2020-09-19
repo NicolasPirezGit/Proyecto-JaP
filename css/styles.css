@@ -249,8 +249,12 @@ a.custom-card:hover {
   left: -604px;
 }
 
-#related-prod-title {
+#related-prod-images {
   margin-bottom: 10px;
+}
+
+#related-prod-title {
+  margin: 20px 0px 25px 0px;
 }
 
 .card-prod-title {
@@ -259,3 +263,47 @@ a.custom-card:hover {
   font-weight: 400;
   font-size: 18px;
 }
+
+.col-md-4 {
+  transition: transform .2s;
+}
+
+.related-prod-card {
+  transition: transform .2s;
+}
+
+.related-prod-card:hover {
+  transform: scale(1.1);
+}
+
+.dropdown-menu > a{
+  color: #ffffff !important;
+}
+
+.dropdown-menu > a:hover {
+  color: #0087F7 !important;
+  background-color: #ffffff !important;
+}
+
+.carousel-item{
+  height: 500px;
+} 
+.carousel-item img{
+  height: 500px;
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: .6s;
+  transition-property: opacity;
+ }
+ 
+ .carousel-fade  .carousel-item.active {
+   opacity: 1;
+ }
+ 
+ .carousel-fade .carousel-item.active {
+  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
+ }
+
