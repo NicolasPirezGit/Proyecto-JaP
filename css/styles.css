@@ -276,15 +276,6 @@ a.custom-card:hover {
   transform: scale(1.1);
 }
 
-.dropdown-menu > a{
-  color: #ffffff !important;
-}
-
-.dropdown-menu > a:hover {
-  color: #0087F7 !important;
-  background-color: #ffffff !important;
-}
-
 .carousel-item{
   height: 500px;
 } 
