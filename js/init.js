@@ -48,14 +48,16 @@ var getJSONData = function(url){
 document.addEventListener("DOMContentLoaded", function(){
   let userLogged = localStorage.getItem("User-Logged");
   let userInfo = document.getElementById("info-user");
-  let user = document.getElementById("user");
+  let user = document.getElementById("dropdownMenuButton");
 
   if(userLogged) {
     userLogged = JSON.parse(userLogged);
-    user.innerText += "Usuario: " + userLogged.email;
+    user.innerText += userLogged.email;
     userInfo.style = "display: inline-block";
   }
 
-  
+  document.getElementById("log-out").addEventListener("click", () => { 
+    localStorage.removeItem("User-Logged");
+  });
 
 });

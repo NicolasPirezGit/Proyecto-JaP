@@ -26,19 +26,42 @@ function showImagesGallery(array){
 }
 
 
-function showRelatedProducts(array) {
+function showRelatedProducts(array, arrayPositions) {
 
     let htmlContentToAppend = "";
-
+    
     for (let i = 0; i < array.length; i++) {
         let currentRelProd = array[i];
 
-        htmlContentToAppend = `
+        for(let x = 0; x < arrayPositions.length; x++) {
+
+            if(i === arrayPositions[x]) {
+                htmlContentToAppend += `
+                
+                    <div class="col-md-4">
+                        <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
+                            <img class="bd-placeholder-img card-img-top"  src=${currentRelProd.imgSrc}>
+                            <h3 class="card-prod-title"><strong>${currentRelProd.name}</strong></h3>
+                            <div class="card-body">
+                                <p class="card-text">${currentRelProd.description}</p>
+                            </div>
+                        </a>
+                    </div>
+                    `
+
+                document.getElementById("related-products-row").innerHTML = htmlContentToAppend;
+            }
+            
+        }
+        
+        /*let currentRelProd = array[i];
+
+        htmlContentToAppend += `
         <div class="row">
                 <div class="col-md-4">
                   <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
                     <img class="bd-placeholder-img card-img-top"  src=${currentRelProd.imgSrc}>
-                    <h3 class="card-prod-title"></h3>
+                    <h3 class="card-prod-title"><strong>${currentRelProd.name}</strong></h3>
                     <div class="card-body">
                       <p class="card-text">${currentRelProd.description}</p>
                     </div>
@@ -47,9 +70,9 @@ function showRelatedProducts(array) {
               </div>
         `
 
-        document.getElementById("related-products-elements").innerHTML = htmlContentToAppend;    
+        document.getElementById("related-products-elements").innerHTML = htmlContentToAppend;*/  
     }
-    
+
 }
 
 
@@ -171,19 +194,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             //Muestro las imagenes en forma de galería
             showImagesGallery(product.images);
-
             
         }
 
         getJSONData(PRODUCTS_URL).then(function(resultObj) {
-            if(resultObj.status === "ok") {
+            if (resultObj.status === "ok") {
                 let relatedProduct = resultObj.data;
+                console.log(relatedProduct);
 
                 let relatedProdNumbers = product.relatedProducts;
-                let relatedProdArray = relatedProduct[relatedProdNumbers[0]];
+                let relatedProdArray = relatedProduct;
                 console.log(relatedProdArray);
                 
-                showRelatedProducts(relatedProdArray);     
+                showRelatedProducts(relatedProdArray, relatedProdNumbers);     
             }
         });
 
