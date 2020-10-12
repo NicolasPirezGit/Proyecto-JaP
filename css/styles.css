@@ -167,13 +167,6 @@ a.custom-card:hover {
   margin: 10px 30px 0px 0px;
 }
 
-/*#info-user {
-  color: white;
-  position: relative;
-  top: 8px;
-  left: 30px;
-}*/
-
 #buscador {
   position: relative;
   top: -20px;
@@ -226,7 +219,7 @@ a.custom-card:hover {
   width: 600px;
 }
 
-#publishCommentButton {
+#publishCommentButton, #ready {
   position: relative;
   border: none;
   border-radius: 5px;
@@ -289,12 +282,44 @@ a.custom-card:hover {
   transition-property: opacity;
  }
  
- .carousel-fade  .carousel-item.active {
+.carousel-fade  .carousel-item.active {
    opacity: 1;
  }
  
- .carousel-fade .carousel-item.active {
+.carousel-fade .carousel-item.active {
   transform: translateX(0);
   transform: translate3d(0, 0, 0);
  }
 
+#cart-table {
+  text-align: center;
+  position: relative;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#cart-header, #cart-foot {
+  background-color: cornflowerblue;
+}
+
+.cart-column {
+   border: solid 1px black;
+   width: 15%;
+ }
+
+#ready {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  width: 120px;
+  height: 50px;
+  top: 20px;
+  left: 45%;
+  box-shadow: none;
+  background-color: #2450e0;
+  color: #fcfcfc;
+}
+
+.shipping-options {
+  cursor: pointer;
+}

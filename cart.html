@@ -52,22 +52,58 @@
       </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  <h2 class="text-center p-4">Carrito de compras</h2>
+
+  <div class="container">
+
+    <table class="table" style="font-family: Arial, Helvetica, sans-serif;">
+      <thead style="background-color: #496de1; color: white;">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Producto</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Subtotal (USD)</th>
+        </tr>
+      </thead>
+      <tbody id="cart-table-body" style="background-color: gainsboro;">
+        
+      </tbody>
+
+      <tfoot>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <th scope="row" style="background-color: #496de1; color: white; font-size: 20px;">Total (USD)</th>
+          <th id="cart-total" style="background-color: #496de1; color: white; font-size: 20px;"></th>
+        </tr>
+      </tfoot>
+
+    </table>
+
+    <div id="shipping-type" style="font-family: Arial, Helvetica, sans-serif;">
+      <h4>Tipo de envío</h4>
+      <form>
+        <br>
+        <label for="radio-standard">Standard:</label>
+        <input type="radio" class="shipping-options" id="radio-standard" name="shipping" value="1.99" checked>
+        <label for="radio-standard">USD 1.99 (Tiempo de entrega estimado: 3 - 6 días)</label>
+        <br>
+        <label for="radio-premium">Premium:</label>
+        <input type="radio" class="shipping-options" id="radio-premium" name="shipping" value="9.99">
+        <label for="radio-premium">USD 9.99 (Tiempo de entrega estimado: 24 - 36 horas)</label>
+        <br>
+        <label for="radio-express" style="margin-left: 6px;">Express:</label>
+        <input type="radio" class="shipping-options" id="radio-express" name="shipping" value="19.99">
+        <label for="radio-express">USD 19.99 (Tiempo de entrega estimado: 1 - 3 horas)</label>
+      </form>
     </div>
+
   </div>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>
