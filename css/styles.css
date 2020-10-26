@@ -323,3 +323,48 @@ a.custom-card:hover {
 .shipping-options {
   cursor: pointer;
 }
+
+.total-boxes {
+  background-color: #496de1;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#cart-buy {
+  width: 15%;
+  height: 50px;
+  position: relative;
+  left: 44%;
+  margin-bottom: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+#client-door-number, .credit-card-class, .bank-account-class {
+-moz-appearance: textfield;
+margin: 0;
+}
+
+.cart-address-fields {
+  margin-top: 7%;
+}
+
+#failed-validation-msg {
+  position: relative;
+  left: 38%;
+  margin-bottom: 2%;
+}
+
+#successful-buy-msg {
+  text-align: center;
+  font-size: 24px;
+  color: #a8a8a8;
+}
+
+#cart-link-to-cover {
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  font-size: 20px;
+  left: 45%;
+}
