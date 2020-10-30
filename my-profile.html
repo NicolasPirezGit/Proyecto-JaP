@@ -11,6 +11,7 @@
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   <style>
     .bd-placeholder-img {
@@ -53,14 +54,260 @@
       </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  <div class="row">
+    <div class="col">
+      <div class="container-fluid mt-5">
+        <h3 class="ml-5" id="profile-main-title">Ajustes de perfil</h3>
+        <hr class="separating-hor-line">
+      </div>
     </div>
   </div>
+  
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-4">
+        <aside>
+          <div class="container mt-4 separating-ver-line" id="aside-container">
+            <h5 class="mr-2" id="profile-img-title">Tu perfil</h5>
+            <div id="profile-img-container">
+              <img src="img/profilePic.jpg" id="user-profile-img" alt="User profile image">
+            </div>
+            <a href="my-profile.html" id="profile-username">Lady_Trump</a>
+            <p id="update-user-img">Actualizar imagen</p>
+            <div class="container" id="user-statistics-container">
+              <div class="container row" id="user-statistics-title">
+                <p class="user-stats-title col-4">42</p>
+                <p class="user-stats-title col-4">34</p>
+                <p class="user-stats-title col-4">15</p>
+              </div>
+              <div class="container row" id="user-statistics-desc">
+                <p class="user-stats-desc col-4">Compras <br>realizadas</p>
+                <p class="user-stats-desc col-4">Productos <br>valorados</p>
+                <p class="user-stats-desc col-4">Comentarios</p>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-lg rounded" id="premium-suscription-btn">VOLVERSE PREMIUM <i class="fa fa-diamond"></i></button>
+          </div>
+        </aside>
+      </div>
+  
+      <div class="col-8">
+        <main>
+          <div class="container" id="user-data-container">
+            <div class="row mb-3 mt-3">
+              <div class="col">
+                <h5 class="form-subtitles">Información básica</h5>
+                <hr>
+              </div>
+            </div>
+            <form>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="profile-user-name">Nombres</label>
+                  </div>
+                </div>
+          
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control profile-input-fields" id="profile-user-names" placeholder="Introduce tu nombre...">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="profile-user-surnames">Apellidos</label>
+                  </div>
+                </div>
+        
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control profile-input-fields" id="profile-user-surnames" placeholder="Introduce tus apellidos...">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="profile-user-birthdate">Fecha de nacimiento</label>
+                  </div>
+                </div>
+          
+                <div class="row">
+                  <div class="col">
+                    <input type="date" class="form-control profile-input-fields" id="profile-user-birthdate" placeholder="Introduce tu correo electrónico...">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="profile-user-age">Edad</label>
+                  </div>
+                </div>
+        
+                <div class="row ">
+                  <div class="col">
+                    <input type="number" class="form-control profile-input-fields" id="profile-user-age" placeholder="Introduce tu edad...">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="profile-user-email">Correo electrónico</label>
+                  </div>
+                </div>
+          
+                <div class="row">
+                  <div class="col">
+                    <input type="email" class="form-control profile-input-fields" id="profile-user-email" placeholder="Introduce tu correo electrónico...">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="profile-user-phone">Teléfono de contacto</label>
+                  </div>
+                </div>
+        
+                <div class="row">
+                  <div class="col">
+                    <input type="number" class="form-control profile-input-fields" id="profile-user-phone" placeholder="Introduce un número de teléfono...">
+                  </div>
+                </div>          
+              </div>
+            </form>
+
+            <div class="row mt-5 mb-3">
+              <div class="col">
+                <h5 class="form-subtitles">Seguridad</h5>
+                <hr>
+              </div>
+            </div>
+            <form>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="profile-user-password">Contraseña</label>
+                  </div>
+                </div>
+        
+                <div class="row">
+                  <div class="col">
+                    <input type="password" class="form-control profile-input-fields" id="profile-user-password" value="ladyTrump2020" disabled>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col">
+                    <button type="button" class="btn btn-secondary rounded pull-right" id="profile-change-password">Cambiar contraseña</button>
+                  </div>
+                </div>          
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="user-recovery-email">Correo alternativo</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input type="email" class="form-control profile-input-fields" id="user-recovery-email">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="user-recovery-phone">Teléfono de recuperación</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <input type="number" class="form-control profile-input-fields" id="user-recovery-phone">
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <div class="row mt-5 mb-3">
+              <div class="col">
+                <h5 class="form-subtitles">Privacidad</h5>
+                <hr>
+              </div>
+            </div>
+            <form>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="user-account-visibility">¿Quién puede ver mi perfil?</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <select id="user-account-visibility" class="custom-select profile-input-fields">
+                      <option>Todos</option>
+                      <option selected>Solo usuarios de eMercado</option>
+                      <option>Solo vendedores</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <label for="user-purchases-visibility">¿Quién puede ver mis compras realizadas?</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <select id="user-purchases-visibility" class="custom-select profile-input-fields">
+                      <option>Todos</option>
+                      <option>Solo usuarios de eMercado</option>
+                      <option selected>Nadie</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </form>
+              
+            
+
+            <div class="row mt-5 mb-5 pull-right">
+              <div class="col-sm-5">
+                <button type="button" class="btn btn-secondary rounded profile-main-buttons" id="restore-default-config">Restablecer</button>
+              </div>
+              <div class="col-sm-7">
+                <button type="button" class="btn btn-primary rounded profile-main-buttons" id="save-user-changes">Guardar cambios</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      
+    </div>
+
+  </div>
+
+  
+    
+    
+  
+
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>

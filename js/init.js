@@ -8,17 +8,17 @@ const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_INFO_DESAFIATE = "https://japdevdep.github.io/ecommerce-api/cart/654.json"
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 
-/*var showSpinner = function(){
+var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
 }
 
 var hideSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "none";
-}*/
+}
 
 var getJSONData = function(url){
     var result = {};
-    //showSpinner();
+    showSpinner();
     return fetch(url)
     .then(response => {
       if (response.ok) {
@@ -30,13 +30,13 @@ var getJSONData = function(url){
     .then(function(response) {
           result.status = 'ok';
           result.data = response;
-          //hideSpinner();
+          hideSpinner();
           return result;
     })
     .catch(function(error) {
         result.status = 'error';
         result.data = error;
-        //hideSpinner();
+        hideSpinner();
         return result;
     });
 }
@@ -44,9 +44,12 @@ var getJSONData = function(url){
 
 
 document.addEventListener("DOMContentLoaded", function(){
-  /*let userLogged = localStorage.getItem("User-Logged");
+  const PROFILE = "https://nicolaspirezgit.github.io/Proyecto-JaP/my-profile";
+
+  let userLogged = localStorage.getItem("User-Logged");
   let userInfo = document.getElementById("info-user");
   let user = document.getElementById("dropdownMenuButton");
+  let currentLocation = window.location.href;
 
   if(userLogged) {
     userLogged = JSON.parse(userLogged);
@@ -56,6 +59,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   document.getElementById("log-out").addEventListener("click", () => { 
     localStorage.removeItem("User-Logged");
-  });*/
+  });
 
-}); //Problemas con el spinner y el nombre de usuario. Resolver.
+});
