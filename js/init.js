@@ -61,4 +61,8 @@ document.addEventListener("DOMContentLoaded", function(){
     localStorage.removeItem("User-Logged");
   });
 
+  if(currentLocation === PROFILE) {
+    return console.log(currentLocation === PROFILE);
+  }
+
 });
