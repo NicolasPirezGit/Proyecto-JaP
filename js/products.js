@@ -48,24 +48,24 @@ function showProductsList(){
                 
                 if(buscar == undefined || product.name.toLowerCase().indexOf(buscar) != -1 || product.description.toLowerCase().indexOf(buscar) != -1) {
                     htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">`+ product.name +`</h4>
-                            <small class="text-muted">` + product.soldCount + ` vendidos</small>
+            
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-4">
+                <a href="product-info.html">
+                    <div class="card">
+                        <img class="card-img-top" src="${product.imgSrc}" alt="${product.description}">
+                        <hr>
+                        <h4 class="card-text" style="text-align: center;">${product.name}</h4>
+                        <hr>
+                        <div class="card-body">
+                            <p class="card-text mt-2">Precio: ${product.cost} ${product.currency}</p>
+                            <p class="card-text mt-3" style="font-size: 14px;">${product.description}</p>
+                            <small class="text-muted mt-2"> ${product.soldCount} vendidos</small>
                         </div>
-                        <p class="mb-1">` + product.description + `</p>
-                        <br>
-                        <p class="mb-1">` + 'Precio: ' + product.cost + ' ' + product.currency + `</p>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
             `
-                }
+            }
         }
 
         document.getElementById("products-container").innerHTML = htmlContentToAppend;

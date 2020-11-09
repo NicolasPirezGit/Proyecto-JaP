@@ -44,12 +44,10 @@ var getJSONData = function(url){
 
 
 document.addEventListener("DOMContentLoaded", function(){
-  const PROFILE = "https://nicolaspirezgit.github.io/Proyecto-JaP/my-profile";
 
   let userLogged = localStorage.getItem("User-Logged");
   let userInfo = document.getElementById("info-user");
   let user = document.getElementById("dropdownMenuButton");
-  let currentLocation = window.location.href;
 
   if(userLogged) {
     userLogged = JSON.parse(userLogged);
@@ -61,8 +59,21 @@ document.addEventListener("DOMContentLoaded", function(){
     localStorage.removeItem("User-Logged");
   });
 
-  if(currentLocation === PROFILE) {
-    return console.log(currentLocation === PROFILE);
-  }
-
 });
+
+/*<a href="product-info.html" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
+                    </div>
+                    <div class="col">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">`+ product.name +`</h4>
+                            <small class="text-muted">` + product.soldCount + ` vendidos</small>
+                        </div>
+                        <p class="mb-1">` + product.description + `</p>
+                        <br>
+                        <p class="mb-1">` + 'Precio: ' + product.cost + ' ' + product.currency + `</p>
+                    </div>
+                </div>
+            </a>*/

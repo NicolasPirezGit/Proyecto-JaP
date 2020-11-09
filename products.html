@@ -32,16 +32,25 @@
         </div>
       </div>
     </nav>
-    <div class="main-title">
-      <h1 id="prod-title">Productos</h1>
-      <p id="prod-sub-title">¡Encuentra lo que estás buscando!</p>
+    <div class="container main-title">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 id="prod-title">Productos</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <p id="prod-sub-title">¡Encuentra lo que estás buscando!</p>      
+        </div>
+      </div>
     </div>
+
     <div class="products-filter">
 
       <!--FILTRO ASCENDENTE Y DESCENDENTE POR PRECIO, Y DESCENDENTE POR RELEVANCIA-->
       <div class="container">
         <div class="row">
-            <div class="col text-right">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right">
                 <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
                     <p id="filter-name">Filtrar por:</p>
                     <label class="btn btn-light active" id="sortDesc" >
@@ -60,8 +69,7 @@
 
         <!--FILTRO DE RANGO POR PRECIO-->
         <div class="row justify-content-end">
-          <div class="col-md-6"></div>
-            <div class="col-md-6 col-sm-12 mb-1 container">
+            <div class="col-md-6 col-sm-12 mb-1">
               <div class="row container p-0 m-0">
                 <div class="col">
                   <p class="font-weight-normal text-right my-2">Precio (USD):</p>
@@ -88,10 +96,15 @@
         <input type="search" name="search-field" class="form-control" id="buscador" placeholder="Busca artículos por nombre o descripción...">
         <button class="btn btn-link btn-sm" id="clear-search">Limpiar</button>
         <!------------>
+      </div>
+    <div class="container">
+      <div class="row" id="products-container">
+        <!--Aquí se muestra el listado de productos-->
+      </div>
     </div>
-    <div id="products-container">
-      <!--Aquí se muestra el listado de productos-->
-    </div>
+
+
+
     <footer class="text-muted bg-light">
       <div class="container">
         <p class="float-right">
